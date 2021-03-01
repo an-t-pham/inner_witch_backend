@@ -58,62 +58,62 @@ The application we will create during the project build series is a "Syllabus Sh
 
 **START WITH LOGIN**
 
-- [x] 9. Create your `UsersController`
+- [] 9. Create your `UsersController`
   - Mount new controller in `config.ru` with `use UsersController` (Why do we add this?)
 
-- [x] 10. Enable `sessions` in `ApplicationController`
+- [] 10. Enable `sessions` in `ApplicationController`
     - Enable sessions
     - Create session secret
 
-- [x] 11. Build routes and views for login
+- [] 11. Build routes and views for login
   - Build your `get` login route + "login" view
   - Build your `post` login route
       - **Tip**: Here is where we authenticate the user and leverage the session hash to log them in!
   - Build your `get users/:id` route + "show" view
 
-- [x] 12. Create your `ApplicationController` helper methods
+- [] 12. Create your `ApplicationController` helper methods
   - **Ask**: Why do we add this?
   - `#logged_in?`: checks if the user is logged in
   - `#current_user`: keeps track of the user currently logged in
 
 **MOVE ON TO SIGN UP**
-- [x] 13. Build routes and views for signup
+- [] 13. Build routes and views for signup
   - Build your `get` signup route + "signup" view
   - Build your `post` signup route
 
 **WRAP UP WITH LOG OUT**
-- [x] 14. Build your `get` logout route
+- [] 14. Build your `get` logout route
 
 ### PART 3 — CRUD: Create, Read, Update, Delete
 
-- [x] 15. Create your `PostsController`
+- [] 15. Create your `PostsController`
   - Mount new controller in `config.ru` with `use PostsController`
   - **Ask**: Why do we add this? ^
 
-- [x] 16. Implement READ functionality
+- [] 16. Implement READ functionality
   - Create `get` posts route
   - Create a view for displaying all posts
   - Create show route
 
-- [x] 17. Implement CREATE functionality
+- [] 17. Implement CREATE functionality
   - Create `get` posts route and view to render form
   - Create `post` route to create new post
 
-- [x] 18. Implement UPDATE functionality
+- [] 18. Implement UPDATE functionality
   - Add `use Rack::MethodOverride` in `config.ru`
   - **Ask**: Why do we add this? ^
   - Create `get` route and view to render form
   - Create `patch` route to update an existing post
 
-- [x] 19. Implement DELETE functionality
+- [] 19. Implement DELETE functionality
   - Create `delete` form in relevant view
   - Create `delete` route to delete post
 
 ### PART 4 — Tighten Up!: Validations and Authorization
-- [x] 20. Implement `sinatra-flash` gem to display validation failures and improve user experience (UX)
+- [] 20. Implement `sinatra-flash` gem to display validation failures and improve user experience (UX)
   - Review the [docs](https://github.com/SFEley/sinatra-flash)
   - **Tip**: a `flash[:message]` has the lifecyle of one `GET` request and will not show up when rendering an `erb` file.
-- [x] 21. Include ActiveRecord validations in your `User` and `Post` model that checks for user inputs
+- [] 21. Include ActiveRecord validations in your `User` and `Post` model that checks for user inputs
   - **Ex**: Making sure all form fields are filled out or that a user is using a unique email or username
   - Review the [docs](https://guides.rubyonrails.org/active_record_validations.html)
   - **Tip**: `has_secure_password` has a built in validation for the `password_digest` attribute!

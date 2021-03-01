@@ -56,12 +56,16 @@ The application we will create during the project build series is a "Syllabus Sh
        namespace :v1 do 
          resources :cards, only[:index, :create]
         end
-    end
+     end
    end
 
    -  Run `rails routes` to confirm routes
    - Visit `http://localhost:3000/api/v1/<your_resource_name>` to see error 
 - [ ] 2. Controllers rendering JSON based on routes
+    - In your console run: `rails g controller api/v1/<your controller_name>` (Make sure you capitalize the first letter of the controller name!)
+    - Build relevant routes for MVP (ex: `index` and `create`)
+    - Visit `http://localhost:3000/api/v1/<your_resource_name>` to see JSON data
+    
 - [ ] 3. Fast JSON Serializer
 
 **NOW, CONSIDER USER CONTROLLER, APPLICATION CONTROLLER, AND VIEWS**

@@ -53,7 +53,5 @@ hierophant = Card.create(
 reading = Reading.create(
     cards_in_position: [emperor.id, priestess.id, hierophant.id, empress.id, magician.id]
 )
-# reading.cards = [emperor, priestess, hierophant, empress, magician]
-# reading.save
 
 reading.cards_in_position.map{|c| CardReading.create(card_id: c, reading_id: reading.id)}

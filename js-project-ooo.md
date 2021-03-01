@@ -47,6 +47,20 @@ The application we will create during the project build series is a "Syllabus Sh
 ### PART 2: Routes, Controllers, Serializers
 
 - [ ] 1. Name spaced routes
+   -Implement _specific_ namespaced routes for _a_ controller **for MVP**
+   -REMEMBER! We're _trying_ to build vertically
+
+   ```ruby
+   Rails.application.routes.draw do 
+     namespace :api do
+       namespace :v1 do 
+         resources :cards, only[:index, :create]
+        end
+    end
+   end
+
+   -  Run `rails routes` to confirm routes
+   - Visit `http://localhost:3000/api/v1/<your_resource_name>` to see error 
 - [ ] 2. Controllers rendering JSON based on routes
 - [ ] 3. Fast JSON Serializer
 

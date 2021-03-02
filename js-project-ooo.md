@@ -99,6 +99,24 @@ The application we will create during the project build series is a "Syllabus Sh
 
  - [x] 4. TEST: Confirm data at your Rails endpoints! (eg: http://localhost:3000/api/v1/cards)
  - [x] 5. Build out your associated models using this same proecess. REMEMBER: Focus on building vertically MVP this means only starting with 2 or 3 models before moving on to the frontend.
+
+ ## PART 3 — DOM Manipulation, Events, and Fetch using Rails API
+
+ - JS MANTRA: When some event happens, I want to make what kind of fetch and then manipulate the DOM in what way?
+
+  ***Intial Setup***
+  - [] 1. Create separete directory for frontend
+  - [] 2. Create index.html file with script tag connecting your `index.js`. Eg: `<script type="text/javascript" src="index.js"></script>`
+  - [] 3. Create index.js, `console.log("in index.js")`, and check for the logged message in your dev tools to confirm the `index.html` <> `index.js` connection was etablished.
+
+  ***Connect your API to your frontend!***
+  - [] 4. Think about the JS Mantra and answer this question: When the DOM Content is Loaed, I want to make a GET fetch and then manipulate the DOM in what way (usually render the data)?
+  - [] 5. Create DOMContentLoaded event listener and `console.log("loaded")` as the event handler to confirm we've properly set up the listener.
+  - [] 6. We're eventually going to make a call to the `index` route of our API(eg: http://localhost:3000/api/v1/cards). Run your rails server and visit that end point in the browser to confirm the expected JSON data is present.
+  - [] 7. We can see the JSON data in the browser but in order to access it in our frontend, we'll need to setup Cross Origin Resource Sharing (CORS). In order to do this we'll need to do a couple things: 
+     - Navigate to your Gemfile and uncomment `gem 'rack-cors'` and then `bundle install`. You can read more abour COR in the PART 3 notes.
+     - Inside of `config/initializers/cors.rb` uncomment the CORS code and update `origins 'example.com'` to `origins '*'`
+  - [] 8. Commit and push this code!
             
 **NOW, CONSIDER USER CONTROLLER, APPLICATION CONTROLLER, AND VIEWS**
 
@@ -134,7 +152,7 @@ The application we will create during the project build series is a "Syllabus Sh
 **WRAP UP WITH LOG OUT**
 - [] 14. Build your `get` logout route
 
-### PART 3 — CRUD: Create, Read, Update, Delete
+### PART 4 — CRUD: Create, Read, Update, Delete
 
 - [] 15. Create your `PostsController`
   - Mount new controller in `config.ru` with `use PostsController`
@@ -159,7 +177,7 @@ The application we will create during the project build series is a "Syllabus Sh
   - Create `delete` form in relevant view
   - Create `delete` route to delete post
 
-### PART 4 — Tighten Up!: Validations and Authorization
+### PART 5 — Tighten Up!: Validations and Authorization
 - [] 20. Implement `sinatra-flash` gem to display validation failures and improve user experience (UX)
   - Review the [docs](https://github.com/SFEley/sinatra-flash)
   - **Tip**: a `flash[:message]` has the lifecyle of one `GET` request and will not show up when rendering an `erb` file.

@@ -84,11 +84,22 @@ The application we will create during the project build series is a "Syllabus Sh
        ```ruby
        class CardSerializer
          include FastJsonapi::ObjectSerializer
-         attributes :title, :description, :image_url, :category_id
+         attributes :title, :description, :image_url, 
        end
        ```
     - Accessing Associations (Related Objects)
+      ```ruby
+         class CardSerializer
+           include FastJsonapi::ObjectSerializer
+           attributes :title, :description, :image_url, :readings
+         end
+         ```
+    - Adding Relationships
+      - To control attributes displayed in the association view PART 2 notes on adding relationships
 
+ - [x] 4. TEST: Confirm data at your Rails endpoints! (eg: http://localhost:3000/api/v1/cards)
+ - [x] 5. Build out your associated models using this same proecess. REMEMBER: Focus on building vertically MVP this means only starting with 2 or 3 models before moving on to the frontend.
+            
 **NOW, CONSIDER USER CONTROLLER, APPLICATION CONTROLLER, AND VIEWS**
 
 *IMPORTANT:* Build views and controller actions based on the flow of your app, one step at a time, testing as you go!

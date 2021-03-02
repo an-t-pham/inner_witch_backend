@@ -66,7 +66,7 @@ The application we will create during the project build series is a "Syllabus Sh
     - Build relevant routes for MVP (ex: `index` and `create`)
     - Visit `http://localhost:3000/api/v1/<your_resource_name>` to see JSON data
     
-- [ ] 3. Fast JSON Serializer
+- [x] 3. Fast JSON Serializer
     - Add `gem 'fast_jsonapi'` to your Rails project's Gemfile and run `bundle install`
     - Create Serialize classes
       - `rails g serializer <your_resource_name>`
@@ -81,7 +81,13 @@ The application we will create during the project build series is a "Syllabus Sh
         end
         ```
     - Adding Attributes
-       ruby
+       ```ruby
+       class CardSerializer
+         include FastJsonapi::ObjectSerializer
+         attributes :title, :description, :image_url, :category_id
+       end
+       ```
+    - Accessing Associations (Related Objects)
 
 **NOW, CONSIDER USER CONTROLLER, APPLICATION CONTROLLER, AND VIEWS**
 

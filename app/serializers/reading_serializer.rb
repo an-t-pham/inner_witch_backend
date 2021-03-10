@@ -1,4 +1,4 @@
 class ReadingSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :cards_in_position
 end

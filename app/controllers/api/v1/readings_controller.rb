@@ -2,7 +2,6 @@ class Api::V1::ReadingsController < ApplicationController
 
     def create
         reading = Reading.new(reading_params)
-
         if reading.save
             render json: ReadingSerializer.new(reading), status: :accepted
         else
@@ -11,10 +10,15 @@ class Api::V1::ReadingsController < ApplicationController
 
     end
 
+    def index
+        readings = Reading.all
+        render json: ReadingSerializer.new(readings)
+    end
+
     private
     
     def reading_params
-    params.require(:reading).permit(:cards_in_position)
+    params.require(:reading).permit(:cards_in_position => [])
     end
 
 end

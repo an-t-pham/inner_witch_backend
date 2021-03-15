@@ -4,23 +4,23 @@ class Reading < ApplicationRecord
     
    
 
-    def current_situation   
+    def past 
         Card.find_by_id(cards_in_position[0]) 
     end
 
-    def tasks_at_hand
+    def present
         Card.find_by_id(cards_in_position[1]) 
     end
 
-    def new_challenges
+    def future
         Card.find_by_id(cards_in_position[2]) 
     end
 
-    def strength
+    def reason
         Card.find_by_id(cards_in_position[3]) 
     end
 
-    def ideal_outcome
+    def potential
         Card.find_by_id(cards_in_position[4]) 
     end
 end

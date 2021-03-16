@@ -5,4 +5,8 @@ class Card < ApplicationRecord
     def self.random_all
         self.all.map {|c| c.id}.shuffle
     end
+
+    def self.random
+        self.all.shuffle.first
+    end
 end

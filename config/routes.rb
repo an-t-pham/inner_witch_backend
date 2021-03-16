@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do 
        resources :cards, only: [:index]
+         get '/random_card', to: 'cards#random_card', as: 'random_card'
        resources :readings, only: [:create, :index]
        resources :randoms, only: [:index]
     end

@@ -4,4 +4,5 @@ class Api::V1::RandomsController < ApplicationController
         random_cards = Card.random_all
         render json: { card_ids:random_cards }
     end
+
 end

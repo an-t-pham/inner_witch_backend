@@ -6,17 +6,11 @@ class Api::V1::CardsController < ApplicationController
         render json: CardSerializer.new(cards)
     end
 
-    # def create
-    #     card = Card.new(card_params)
+    def random_card
+        card = Card.random
 
-    #     if card.save
-    #         # render json: card, status: :accepted
-    #         render json: CardSerializer.new(card), status: :accepted
-    #     else
-    #         render json: {errors: card.errors.full_messages}, status: :unprocessible_entity
-    #     end
-
-    # end
+        render json: CardSerializer.new(card)
+    end
 
     private
     

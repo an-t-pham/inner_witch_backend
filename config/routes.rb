@@ -5,8 +5,10 @@ Rails.application.routes.draw do
     namespace :v1 do 
        resources :cards, only: [:index]
          get '/random_card', to: 'cards#random_card', as: 'random_card'
+         get '/random_cards', to: 'cards#random_cards', as: 'random_cards'
+
        resources :readings, only: [:create, :index]
-       resources :randoms, only: [:index]
+       
     end
   end
 

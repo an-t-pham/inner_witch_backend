@@ -10,8 +10,7 @@ This is a single page application for Tarot Reading. This is the backend of the 
 1. Fork and clone the repository.
 2. Run 'bundle install' in your terminal to ensure all dependencies are installed.
 3. Run 'rails server' in your terminal.
-4. If you would like to check if the database works fine in JSON, navigate to 'localhost:3000/api/v1/cards' or 'localhost:3000/api/v1/random_cards' or 'localhost:3000/api/v1/random_card'.
-5. Fork and clone the frontend repository (follow the installing instruction in frontend README.md).
+4. Fork and clone the frontend repository https://github.com/anpham148/inner_witch_frontend (follow the installing instruction in frontend README.md).
 
 
  Built With

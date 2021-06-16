@@ -1,8 +1,10 @@
 # WELCOME TO INNERWITCH!
 
+![alt text](https://github.com/an-t-pham/inner_witch_frontend/blob/main/background.png) </br>
+
  Summary
 
-This is a single page application for Tarot Reading. This is the backend of the app.
+A Single Page Application for Tarot Reading. Users have 2 options either pick 1 card which will be the card of the day or 5 cards to have a full tarot reading about their past/current situation/challenges/weakness/best outcome. This api backend of the app is built with Ruby on Rails.
 
 
  Installing
